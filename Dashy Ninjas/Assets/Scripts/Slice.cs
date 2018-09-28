@@ -25,7 +25,6 @@ public class Slice : MonoBehaviour {
         {
             StartCoroutine(Slash(moveSpeed));
         }
-        Debug.Log(mouseLook);
 	}
     IEnumerator Slash(float speed)
     {
