@@ -6,6 +6,7 @@ public class Slice : MonoBehaviour {
     Vector2 mouseLook;
     public float moveSpeed = 8;
     public LineRenderer line;
+    public EdgeCollider2D lineCollider;
     public int maxUses = 3;
     int uses;
     CharacterController2D controller;
@@ -28,11 +29,17 @@ public class Slice : MonoBehaviour {
 	}
     IEnumerator Slash(float speed)
     {
+        Vector2[] points = lineCollider.points;
         line.enabled = true;
         line.SetPosition(0, transform.position);
+        lineCollider.enabled = !lineCollider.enabled;
+        points[0] = line.GetPosition(0);
         transform.position = Vector2.Lerp(transform.position, mouseLook, speed);
         line.SetPosition(1, transform.position);
+        points[1] = line.GetPosition(1);
+        lineCollider.points = points;
         yield return new WaitForSeconds(0.2f);
+        lineCollider.enabled = !lineCollider.enabled;
         line.enabled = false;
         uses += 1;
     }
