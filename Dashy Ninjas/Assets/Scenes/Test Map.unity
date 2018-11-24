@@ -190,6 +190,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &534067234 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1806584283018032, guid: e2fc431c040f449fd8cf226a8d2c6d27,
+    type: 2}
+  m_PrefabInternal: {fileID: 1907402970}
 --- !u!1 &643352275
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,6 +209,7 @@ GameObject:
   - component: {fileID: 643352279}
   - component: {fileID: 643352282}
   - component: {fileID: 643352281}
+  - component: {fileID: 643352283}
   m_Layer: 0
   m_Name: Glob 2
   m_TagString: Untagged
@@ -379,6 +385,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &643352283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 643352275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef73a427690ea4559af4dcfec1161582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  line: {fileID: 534067234}
 --- !u!1 &1503668852
 GameObject:
   m_ObjectHideFlags: 0
