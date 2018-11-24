@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114091330940525530}
   - component: {fileID: 114351075727473414}
   - component: {fileID: 50601425814749146}
+  - component: {fileID: 114348243932950874}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Untagged
@@ -72,6 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4329541191392420}
   - component: {fileID: 120051122318116352}
+  - component: {fileID: 68009565762303720}
   m_Layer: 0
   m_Name: Line
   m_TagString: Untagged
@@ -194,6 +196,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.13700634, y: 0.15602204}
   m_EdgeRadius: 0
+--- !u!68 &68009565762303720
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1806584283018032}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
 --- !u!114 &114091330940525530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -239,6 +258,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 114091330940525530}
   moveSpeed: 50
+--- !u!114 &114348243932950874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1126108488571558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1c1210675b2347cc88a3dd2d03c06e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1126108488571558}
 --- !u!114 &114351075727473414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -252,6 +283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 20
   line: {fileID: 120051122318116352}
+  lineCollider: {fileID: 68009565762303720}
   maxUses: 3
 --- !u!120 &120051122318116352
 LineRenderer:
@@ -259,7 +291,7 @@ LineRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1806584283018032}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1

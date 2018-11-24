@@ -32,14 +32,14 @@ public class Slice : MonoBehaviour {
         Vector2[] points = lineCollider.points;
         line.enabled = true;
         line.SetPosition(0, transform.position);
-        lineCollider.enabled = !lineCollider.enabled;
-        points[0] = line.GetPosition(0);
+        lineCollider.enabled = true;
         transform.position = Vector2.Lerp(transform.position, mouseLook, speed);
         line.SetPosition(1, transform.position);
+        points[0] = line.GetPosition(0);
         points[1] = line.GetPosition(1);
         lineCollider.points = points;
         yield return new WaitForSeconds(0.2f);
-        lineCollider.enabled = !lineCollider.enabled;
+        lineCollider.enabled = false;
         line.enabled = false;
         uses += 1;
     }

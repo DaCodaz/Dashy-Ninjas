@@ -15,7 +15,7 @@ public class Door : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         distance = Vector2.Distance(player.transform.position, gameObject.transform.position);
-        if (distance < 1)
+        if (distance < 1.5)
         {
             print(level);
             SceneManager.LoadScene(level);
