@@ -13,7 +13,7 @@ public class Target : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         float dist = Vector2.Distance(gameObject.transform.position, lineCol.transform.position);
-        if (dist < 1) takeDamage();
+        if (lineCol.enabled == true){ if (dist < 1) takeDamage(); }
 	}
     void takeDamage()
     {
