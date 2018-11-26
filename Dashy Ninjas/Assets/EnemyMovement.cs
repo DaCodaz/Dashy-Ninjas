@@ -9,11 +9,15 @@ public class EnemyMovement : MonoBehaviour {
 	
 	void Update () {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
+
+	}
+    private void FixedUpdate()
+    {
         RaycastHit2D hit = Physics2D.Raycast(groundDetector.position, Vector2.down, 1f);
 
-        if(hit.collider == null)
+        if (hit.collider == null)
         {
-            if(movingRight)
+            if (movingRight)
             {
                 transform.eulerAngles = new Vector3(0, -180, 0);
                 movingRight = false;
@@ -25,5 +29,6 @@ public class EnemyMovement : MonoBehaviour {
             }
 
         }
-	}
+
+    }
 }
