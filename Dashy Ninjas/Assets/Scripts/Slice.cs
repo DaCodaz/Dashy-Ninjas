@@ -8,6 +8,8 @@ public class Slice : MonoBehaviour {
     public LineRenderer line;
     public EdgeCollider2D lineCollider;
     public int maxUses = 3;
+    public AudioSource aSource;
+    public AudioClip aClip;
     int uses;
     CharacterController2D controller;
 
@@ -34,6 +36,7 @@ public class Slice : MonoBehaviour {
         line.SetPosition(0, transform.position);
         lineCollider.enabled = true;
         transform.position = Vector2.Lerp(transform.position, mouseLook, speed);
+        aSource.PlayOneShot(aClip);
         line.SetPosition(1, transform.position);
         points[0] = line.GetPosition(0);
         points[1] = line.GetPosition(1);
