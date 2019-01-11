@@ -113,6 +113,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &110995230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1896557570387090, guid: 5c5399393464f4c21a863859faaa19b6,
+    type: 2}
+  m_PrefabInternal: {fileID: 196108007}
 --- !u!1001 &196108007
 Prefab:
   m_ObjectHideFlags: 0
@@ -220,6 +225,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1148228608}
+    - target: {fileID: 1896557570387090, guid: 5c5399393464f4c21a863859faaa19b6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c5399393464f4c21a863859faaa19b6, type: 2}
   m_IsPrefabAsset: 0
@@ -459,7 +468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e9d385092f754d0b8829f427b2f99c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu: {fileID: 0}
+  menu: {fileID: 110995230}
 --- !u!224 &1148228609
 RectTransform:
   m_ObjectHideFlags: 0
