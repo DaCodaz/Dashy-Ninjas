@@ -6,11 +6,10 @@ public class EnemyMovement : MonoBehaviour {
     public Transform groundDetector;
     public float speed = 5f;
     public bool movingRight = true;
-	
-	void Update () {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
 
-	}
+    void Update () {
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
+    }
     private void FixedUpdate()
     {
         RaycastHit2D hit = Physics2D.Raycast(groundDetector.position, Vector2.down, 1f);
