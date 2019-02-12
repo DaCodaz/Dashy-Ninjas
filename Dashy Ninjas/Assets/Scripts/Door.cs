@@ -6,12 +6,21 @@ using UnityEngine.SceneManagement;
 public class Door : MonoBehaviour {
     public GameObject player;
     public int lastLevel, firstLevel;
+    public bool target;
     public static int level;
+    public float req = 1.5f;
     float distance;
 
 	void Start () {
-        level = SceneManager.GetActiveScene().buildIndex +1;
-        lastLevel = SceneManager.sceneCountInBuildSettings + 1;
+        if(target)
+        {
+            level = SceneManager.GetActiveScene().buildIndex + 1;
+        }
+        if(!target)
+        {
+            level = SceneManager.GetActiveScene().buildIndex - 1;
+        }
+        //lastLevel = SceneManager.sceneCountInBuildSettings + 1;
         if (level == lastLevel)
         {
             level = firstLevel;
@@ -20,7 +29,7 @@ public class Door : MonoBehaviour {
 	
 	void Update () {
         distance = Vector2.Distance(player.transform.position, gameObject.transform.position);
-        if (distance < 1.5)
+        if (distance < req)
         {
             print(level);
             SceneManager.LoadScene(level);
