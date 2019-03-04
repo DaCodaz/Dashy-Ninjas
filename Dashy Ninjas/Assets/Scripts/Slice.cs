@@ -5,11 +5,12 @@ using UnityEngine;
 public class Slice : MonoBehaviour {
     Vector2 mouseLook;
     public float moveSpeed = 8;
-    public LineRenderer line;
-    public EdgeCollider2D lineCollider;
+    public float myDamage = 1;
+    //bool isDashing;
     public int maxUses = 3;
     public AudioSource aSource;
     public AudioClip aClip;
+    public Animator animator;
     int uses;
     CharacterController2D controller;
 
@@ -26,24 +27,23 @@ public class Slice : MonoBehaviour {
         mouseLook = Camera.main.ScreenToWorldPoint(mouseLook);
         if (Input.GetButtonDown("Fire1") && uses<maxUses)
         {
-            StartCoroutine(Slash(moveSpeed));
+            Slash(moveSpeed);
         }
 	}
-    IEnumerator Slash(float speed)
+    void Slash(float speed)
     {
-        Vector2[] points = lineCollider.points;
-        line.enabled = true;
-        line.SetPosition(0, transform.position);
-        lineCollider.enabled = true;
-        transform.position = Vector2.Lerp(transform.position, mouseLook, speed);
+        animator.Play("Dash");
+        //isDashing = true;
         aSource.PlayOneShot(aClip);
-        line.SetPosition(1, transform.position);
-        points[0] = line.GetPosition(0);
-        points[1] = line.GetPosition(1);
-        lineCollider.points = points;
-        yield return new WaitForSeconds(0.2f);
-        lineCollider.enabled = false;
-        line.enabled = false;
+        transform.position = Vector2.Lerp(transform.position, mouseLook, speed);
+        //isDashing = false;
         uses += 1;
     }
+    //void OnCollisionEnter(Collision col)
+    //{
+    //    if (col.gameObject.tag == "target" && isDashing)
+    //    {
+    //        col.gameObject.GetComponent<Target>().takeDamage(myDamage);
+    //    }
+    //}
 }

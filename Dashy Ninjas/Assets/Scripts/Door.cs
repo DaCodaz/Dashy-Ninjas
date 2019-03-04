@@ -12,11 +12,11 @@ public class Door : MonoBehaviour {
     float distance;
 
 	void Start () {
-        if(target)
+        if(target == true)
         {
             level = SceneManager.GetActiveScene().buildIndex + 1;
         }
-        if(!target)
+        if(target == false)
         {
             level = SceneManager.GetActiveScene().buildIndex - 1;
         }
