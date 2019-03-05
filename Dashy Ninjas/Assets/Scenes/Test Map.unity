@@ -362,11 +362,6 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 114391946967970942, guid: e2fc431c040f449fd8cf226a8d2c6d27,
-        type: 2}
-      propertyPath: faceMouse
-      value: 
-      objectReference: {fileID: 1612477797}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2fc431c040f449fd8cf226a8d2c6d27, type: 2}
   m_IsPrefabAsset: 0
@@ -615,12 +610,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1612477797 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114348243932950874, guid: e2fc431c040f449fd8cf226a8d2c6d27,
-    type: 2}
-  m_PrefabInternal: {fileID: 886036469}
-  m_Script: {fileID: 11500000, guid: d1c1210675b2347cc88a3dd2d03c06e2, type: 3}
 --- !u!1001 &1680240412
 Prefab:
   m_ObjectHideFlags: 0

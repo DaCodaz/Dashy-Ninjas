@@ -49,7 +49,7 @@ public class Attack : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.E) & canHit)
         {
-            animator.Play("Attack");
+            animator.SetTrigger("Attack");
             target.takeDamage(dam);
         }
     }

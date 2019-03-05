@@ -368,6 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1126108488571558}
+  lookRight: 1
 --- !u!114 &114351075727473414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -399,6 +400,7 @@ MonoBehaviour:
   animator: {fileID: 95390618402155260}
   attackDist: 2
   dam: 1
+  faceMouse: {fileID: 114348243932950874}
 --- !u!114 &114999161322155506
 MonoBehaviour:
   m_ObjectHideFlags: 1
