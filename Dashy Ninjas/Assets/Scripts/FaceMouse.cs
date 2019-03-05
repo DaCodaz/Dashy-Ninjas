@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class FaceMouse : MonoBehaviour {
     public GameObject player;
-    bool lookRight = true;
+    public bool lookRight = true;
     Vector3 CharScale;
-	void Update () {
+
+	void Update () 
+    {
         Vector2 mouse = new Vector2(Input.mousePosition.x, Screen.height - Input.mousePosition.y);
         Vector2 playerScreenPoint = Camera.main.WorldToScreenPoint(player.transform.position);
         if(mouse.x > playerScreenPoint.x && !lookRight)

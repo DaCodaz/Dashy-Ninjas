@@ -7,26 +7,50 @@ public class Attack : MonoBehaviour {
     Target target;
     public Transform attackPoint;
     public Animator animator;
+    public float attackDist = 1f;
     public float dam = 1;
+    public FaceMouse faceMouse;
+    RaycastHit2D hit;
 
-	void FixedUpdate () 
+    void FixedUpdate () 
     {
-        RaycastHit2D hit = Physics2D.Raycast(attackPoint.position, Vector2.right, 5f);
-        if (hit.collider.GetComponent<Target>() != null)
+        if (faceMouse.lookRight)
         {
-            print("wow");
-            //target = hit.collider.GetComponent<Target>();
-
+            hit = Physics2D.Raycast(attackPoint.position, Vector2.right, attackDist);
+            if (hit.collider != null)
+            {
+                if(hit.collider.GetComponent<Target>() != null)
+                {
+                    target = hit.collider.GetComponent<Target>();
+                    canHit = true;
+                }
+                else { canHit = false; }
+            }
+            else { canHit = false; }
         }
+        if(!faceMouse.lookRight)
+        {
+            hit = Physics2D.Raycast(attackPoint.position, Vector2.left, attackDist);
+            if (hit.collider != null)
+            {
+                if(hit.collider.GetComponent<Target>() != null)
+                {
+                    target = hit.collider.GetComponent<Target>();
+                    canHit = true;
+                }
+                else { canHit = false; }
+            }
+            else { canHit = false; }
+        }
+
     }
 
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.E) & target != null)
-    //    {
-    //        print("wow");
-    //        animator.Play("Attack");
-    //        target.takeDamage(dam);
-    //    }
-    //}
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E) & canHit)
+        {
+            animator.Play("Attack");
+            target.takeDamage(dam);
+        }
+    }
 }

@@ -5,7 +5,6 @@ using UnityEngine;
 public class Slice : MonoBehaviour {
     Vector2 mouseLook;
     public float moveSpeed = 8;
-    public float myDamage = 1;
     //bool isDashing;
     public int maxUses = 3;
     public AudioSource aSource;
@@ -39,11 +38,5 @@ public class Slice : MonoBehaviour {
         //isDashing = false;
         uses += 1;
     }
-    //void OnCollisionEnter(Collision col)
-    //{
-    //    if (col.gameObject.tag == "target" && isDashing)
-    //    {
-    //        col.gameObject.GetComponent<Target>().takeDamage(myDamage);
-    //    }
-    //}
+ 
 }
