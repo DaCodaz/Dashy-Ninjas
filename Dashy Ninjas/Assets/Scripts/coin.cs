@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class coin : MonoBehaviour {
     public float reqDist = 1;
+    public AudioSource aSource;
+    public AudioClip aClip;
     GameObject player;
     coinManager manager;
     float dist;
@@ -23,8 +25,9 @@ public class coin : MonoBehaviour {
     {
         if (dist < reqDist)
         {
-            Destroy(gameObject);
+            aSource.PlayOneShot(aClip);
             manager.counter += 1;
+            Destroy(gameObject);
         }
     }
 }

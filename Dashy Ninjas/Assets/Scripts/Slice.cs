@@ -5,11 +5,12 @@ using UnityEngine;
 public class Slice : MonoBehaviour {
     Vector2 mouseLook;
     public float moveSpeed = 8;
-    //bool isDashing;
     public int maxUses = 3;
+    public float health = 3;
     public AudioSource aSource;
     public AudioClip aClip;
     public Animator animator;
+    public GameObject gOver;
     int uses;
     CharacterController2D controller;
 
@@ -28,15 +29,22 @@ public class Slice : MonoBehaviour {
         {
             Slash(moveSpeed);
         }
-	}
+        if(health <= 0)
+        {
+            GameOver();
+        }
+    }
     void Slash(float speed)
     {
         animator.Play("Dash");
-        //isDashing = true;
         aSource.PlayOneShot(aClip);
         transform.position = Vector2.Lerp(transform.position, mouseLook, speed);
-        //isDashing = false;
         uses += 1;
     }
- 
+    void GameOver()
+    {
+        gOver.SetActive(true);
+        gameObject.SetActive(false);
+    }
+
 }

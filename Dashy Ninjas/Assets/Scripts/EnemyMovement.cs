@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
     public Transform groundDetector;
+    public Transform playerDetector;
+    public Animator anim;
     public float speed = 5f;
     public bool movingRight = true;
 
@@ -28,6 +30,36 @@ public class EnemyMovement : MonoBehaviour {
             }
 
         }
+        if (movingRight)
+        {
+            RaycastHit2D hat = Physics2D.Raycast(playerDetector.position, Vector2.right, 0.5f);
+            if (hat.collider != null)
+            {
+                if (hat.collider.gameObject.GetComponent<Slice>() != null)
+                {
+                    Slice player = hat.collider.gameObject.GetComponent<Slice>();
+                    attack(player);
+                }
+            }
+        }
+        if (!movingRight)
+        {
+            RaycastHit2D hat = Physics2D.Raycast(playerDetector.position, Vector2.left, 0.5f);
+            if (hat.collider != null)
+            {
+                if (hat.collider.gameObject.GetComponent<Slice>() != null)
+                {
+                    Slice player = hat.collider.gameObject.GetComponent<Slice>();
+                    attack(player);
+                }
+            }
+        }
 
+    }
+    IEnumerator attack(Slice attacked)
+    {
+        anim.SetTrigger("Hit");
+        attacked.health -= 1;
+        yield return new WaitForSeconds(2f);
     }
 }
