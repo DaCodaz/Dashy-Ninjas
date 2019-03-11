@@ -38,7 +38,8 @@ public class EnemyMovement : MonoBehaviour {
                 if (hat.collider.gameObject.GetComponent<Slice>() != null)
                 {
                     Slice player = hat.collider.gameObject.GetComponent<Slice>();
-                    attack(player);
+                    anim.SetTrigger("Hit");
+                    player.health -= 1;
                 }
             }
         }
@@ -50,16 +51,11 @@ public class EnemyMovement : MonoBehaviour {
                 if (hat.collider.gameObject.GetComponent<Slice>() != null)
                 {
                     Slice player = hat.collider.gameObject.GetComponent<Slice>();
-                    attack(player);
+                    anim.SetTrigger("Hit");
+                    player.health -= 1;
                 }
             }
         }
 
-    }
-    IEnumerator attack(Slice attacked)
-    {
-        anim.SetTrigger("Hit");
-        attacked.health -= 1;
-        yield return new WaitForSeconds(2f);
     }
 }
