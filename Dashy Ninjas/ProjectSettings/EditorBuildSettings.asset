@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 0c5359296e9544fda80b82c1fd33271a
   - enabled: 1
-    path: Assets/Scenes/Level 1.unity
+    path: Assets/Scenes/HomeCastle.unity
     guid: 89ebff3afd1774d8a83fd643229ec7da
   - enabled: 1
-    path: Assets/Scenes/Level 2.unity
+    path: Assets/Scenes/Level 1.unity
     guid: 215626f503b7847f6a320b99be0a244a
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: f43753584eeb248c28e1416f3081219b
   - enabled: 1
     path: Assets/Scenes/Test Map.unity
     guid: 2cda990e2423bbf4892e6590ba056729
