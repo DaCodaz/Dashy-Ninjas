@@ -3325,7 +3325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 763327904}
   lastLevel: 4
-  firstLevel: 1
+  firstLevel: 2
   pos: {fileID: 1445194880}
   target: 1
   req: 1.5

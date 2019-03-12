@@ -14,6 +14,6 @@ public class EnemySpawner : MonoBehaviour {
     IEnumerator spawn()
     {
         yield return new WaitForSeconds(spawnTime);
-        GameObject New = Instantiate(enemy, spawnPoint);
+        Instantiate(enemy, spawnPoint);
     }
 }
