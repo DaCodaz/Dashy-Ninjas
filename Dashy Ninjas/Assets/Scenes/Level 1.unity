@@ -339,24 +339,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114999161322155506, guid: e2fc431c040f449fd8cf226a8d2c6d27,
         type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114999161322155506, guid: e2fc431c040f449fd8cf226a8d2c6d27,
-        type: 2}
       propertyPath: coins
       value: 
       objectReference: {fileID: 1748460812}
-    - target: {fileID: 114351075727473414, guid: e2fc431c040f449fd8cf226a8d2c6d27,
-        type: 2}
-      propertyPath: gOver
-      value: 
-      objectReference: {fileID: 28457785}
-    - target: {fileID: 114391946967970942, guid: e2fc431c040f449fd8cf226a8d2c6d27,
-        type: 2}
-      propertyPath: attackDist
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2fc431c040f449fd8cf226a8d2c6d27, type: 2}
   m_IsPrefabAsset: 0

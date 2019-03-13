@@ -252,6 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
+  coin: {fileID: 1745981038717710, guid: ea1a041dd603b4b0a821f82c10057e46, type: 2}
 --- !u!212 &212976531294416080
 SpriteRenderer:
   m_ObjectHideFlags: 1

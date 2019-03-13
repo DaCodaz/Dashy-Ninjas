@@ -7,6 +7,7 @@ public class Attack : MonoBehaviour {
     Target target;
     public Transform attackPoint;
     public Animator animator;
+    public GameObject shuriken;
     public float attackDist = 1f;
     public float dam = 1;
     public FaceMouse faceMouse;
@@ -53,6 +54,29 @@ public class Attack : MonoBehaviour {
             if (canHit)
             {
                 target.takeDamage(dam);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            float posX;
+            if (faceMouse.lookRight)
+            {
+                posX = transform.position.x + 1f;
+            }
+            else
+            {
+                posX = transform.position.x - 1f;
+            }
+            Vector2 pos = new Vector2(posX,transform.position.y);
+            GameObject shur = Instantiate(shuriken, pos, Quaternion.identity);
+            Shuriken shurComp = shur.GetComponent<Shuriken>();
+            if (faceMouse.lookRight)
+            {
+                shurComp.shoot(Vector2.right);
+            }
+            if (!faceMouse.lookRight)
+            {
+                shurComp.shoot(Vector2.left);
             }
         }
     }
