@@ -5,32 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour {
     public GameObject player;
+    public GameObject closed;
     public int lastLevel, firstLevel;
     public Transform pos;
     public bool target;
     public static int level;
     public float req = 1.5f;
+    bool canEnter;
     float distance;
 
 	void Start () {
-        //if(target == true)
-        //{
-        //    level = SceneManager.GetActiveScene().buildIndex + 1;
-        //}
-        //if(target == false)
-        //{
-        //    level = SceneManager.GetActiveScene().buildIndex - 1;
-        //}
-        //if (level == lastLevel)
-        //{
-        //    level = firstLevel;
-        //}
         level = Random.Range(firstLevel, lastLevel);
+        closed.SetActive(false);
 	}
 	
 	void Update () {
         distance = Vector2.Distance(player.transform.position, pos.position);
-        if (distance < req)
+        if (FindObjectOfType(typeof(Target)) != null)
+        {
+            closed.SetActive(true);
+        }
+        if(FindObjectOfType(typeof(Target)) == null)
+        {
+            closed.SetActive(false);
+        }
+        if (distance < req & closed.activeInHierarchy == false)
         {
             print(level);
             SceneManager.LoadScene(level);

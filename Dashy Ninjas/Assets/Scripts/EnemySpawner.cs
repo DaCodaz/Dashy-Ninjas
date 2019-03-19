@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour {
     public GameObject enemy;
     public Transform spawnPoint;
-    public float spawnTime = 10;
+    public float spawnTime = 5;
 
     void Start()
     {
