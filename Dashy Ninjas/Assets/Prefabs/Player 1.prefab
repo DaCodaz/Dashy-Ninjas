@@ -90,7 +90,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1126108488571558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.417, y: 0, z: 0}
+  m_LocalPosition: {x: -5.7595634, y: 2.83, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 4358983334286870}
@@ -404,13 +404,16 @@ MonoBehaviour:
   attackDist: 1
   dam: 1
   faceMouse: {fileID: 114348243932950874}
+  source: {fileID: 82412662630857804}
+  sword: {fileID: 8300000, guid: 3208ef1c9636e4e239d26650a2073dd1, type: 3}
+  shuri: {fileID: 8300000, guid: 3aaa1f02735624cdcad2c4af5315da32, type: 3}
 --- !u!114 &114999161322155506
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1126108488571558}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68150585ac5ac4e24a37d2df7eb3c07d, type: 3}
   m_Name: 

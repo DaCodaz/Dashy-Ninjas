@@ -11,6 +11,9 @@ public class Attack : MonoBehaviour {
     public float attackDist = 1f;
     public float dam = 1;
     public FaceMouse faceMouse;
+    public AudioSource source;
+    public AudioClip sword;
+    public AudioClip shuri;
     RaycastHit2D hit;
 
     void FixedUpdate () 
@@ -51,6 +54,7 @@ public class Attack : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.E))
         {
             animator.SetTrigger("Attack");
+            source.PlayOneShot(sword);
             if (canHit)
             {
                 target.takeDamage(dam);
@@ -58,6 +62,7 @@ public class Attack : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            source.PlayOneShot(shuri);
             float posX;
             if (faceMouse.lookRight)
             {

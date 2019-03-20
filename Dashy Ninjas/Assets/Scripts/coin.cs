@@ -12,7 +12,10 @@ public class coin : MonoBehaviour {
 
     void Start () {
         player = GameObject.FindWithTag("Player");
+        print(player);
         manager = player.GetComponent<coinManager>();
+        print(manager);
+        aSource = player.GetComponent<AudioSource>();
     }
     void Update()
     {

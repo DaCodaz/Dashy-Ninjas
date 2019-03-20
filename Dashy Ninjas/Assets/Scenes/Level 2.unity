@@ -397,6 +397,11 @@ Prefab:
       propertyPath: gOver
       value: 
       objectReference: {fileID: 1192334104}
+    - target: {fileID: 114999161322155506, guid: e2fc431c040f449fd8cf226a8d2c6d27,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2fc431c040f449fd8cf226a8d2c6d27, type: 2}
   m_IsPrefabAsset: 0
@@ -2123,7 +2128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 823317111}
   closed: {fileID: 2030413108}
-  lastLevel: 4
+  lastLevel: 5
   firstLevel: 2
   pos: {fileID: 1656276729}
   target: 0

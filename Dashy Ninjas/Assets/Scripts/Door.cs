@@ -7,6 +7,8 @@ public class Door : MonoBehaviour {
     public GameObject player;
     public GameObject closed;
     public int lastLevel, firstLevel;
+    //public AudioSource source;
+    //public AudioClip closeDoor, openDoor;
     public Transform pos;
     public bool target;
     public static int level;

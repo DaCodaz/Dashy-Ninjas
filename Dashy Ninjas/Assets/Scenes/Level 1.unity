@@ -164,7 +164,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1745981038717710, guid: ea1a041dd603b4b0a821f82c10057e46, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea1a041dd603b4b0a821f82c10057e46, type: 2}
@@ -228,6 +228,11 @@ Prefab:
       propertyPath: gOver
       value: 
       objectReference: {fileID: 28457785}
+    - target: {fileID: 114999161322155506, guid: e2fc431c040f449fd8cf226a8d2c6d27,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2fc431c040f449fd8cf226a8d2c6d27, type: 2}
   m_IsPrefabAsset: 0
@@ -3144,7 +3149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 763327904}
   closed: {fileID: 2068552379}
-  lastLevel: 4
+  lastLevel: 5
   firstLevel: 2
   pos: {fileID: 1445194880}
   target: 1
