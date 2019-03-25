@@ -2128,7 +2128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 823317111}
   closed: {fileID: 2030413108}
-  lastLevel: 5
+  lastLevel: 6
   firstLevel: 2
   pos: {fileID: 1656276729}
   target: 0

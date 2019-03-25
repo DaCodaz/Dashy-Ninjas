@@ -3149,7 +3149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 763327904}
   closed: {fileID: 2068552379}
-  lastLevel: 5
+  lastLevel: 6
   firstLevel: 2
   pos: {fileID: 1445194880}
   target: 1

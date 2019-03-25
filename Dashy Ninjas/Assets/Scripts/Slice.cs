@@ -11,7 +11,6 @@ public class Slice : MonoBehaviour {
     public AudioClip aClip;
     public Animator animator;
     public GameObject gOver;
-    public GameObject button;
     int uses;
     CharacterController2D controller;
 
