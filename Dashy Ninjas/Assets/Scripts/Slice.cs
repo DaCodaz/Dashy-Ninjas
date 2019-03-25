@@ -11,6 +11,7 @@ public class Slice : MonoBehaviour {
     public AudioClip aClip;
     public Animator animator;
     public GameObject gOver;
+    public GameObject button;
     int uses;
     CharacterController2D controller;
 
@@ -25,7 +26,7 @@ public class Slice : MonoBehaviour {
         }
         mouseLook = Input.mousePosition;
         mouseLook = Camera.main.ScreenToWorldPoint(mouseLook);
-        if (Input.GetButtonDown("Fire1") && uses<maxUses)
+        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began && uses<maxUses)
         {
             Slash(moveSpeed);
         }
