@@ -29,7 +29,7 @@ public class coin : MonoBehaviour {
         if (dist < reqDist)
         {
             aSource.PlayOneShot(aClip);
-            manager.counter += 1;
+            CoinCounter.counter += 1;
             Destroy(gameObject);
         }
     }

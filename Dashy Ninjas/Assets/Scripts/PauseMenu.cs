@@ -23,6 +23,11 @@ public class PauseMenu : MonoBehaviour {
     }
     public void MainMenu()
     {
+        CoinCounter.counter = 0;
+        if(CoinCounter.counter > CoinCounter.highScore)
+        {
+            CoinCounter.highScore = CoinCounter.counter;
+        }
         SceneManager.LoadScene("Menu");
     }
 }
