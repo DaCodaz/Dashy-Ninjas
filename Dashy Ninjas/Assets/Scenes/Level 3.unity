@@ -973,8 +973,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1380239236}
   closed: {fileID: 620793839}
-  lastLevel: 7
-  firstLevel: 2
+  lastLevel: 8
+  firstLevel: 3
   pos: {fileID: 1565656230}
   target: 0
   req: 1.5
@@ -1182,6 +1182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1485064508}
   - component: {fileID: 1485064507}
+  - component: {fileID: 1485064509}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -1217,6 +1218,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1485064509
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1485064506}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -8.868469, y: -0.1062088}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32733154, y: 9.850767}
+  m_EdgeRadius: 0
 --- !u!1 &1565656229
 GameObject:
   m_ObjectHideFlags: 0

@@ -686,8 +686,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2128769650}
   closed: {fileID: 2050105988}
-  lastLevel: 4
-  firstLevel: 2
+  lastLevel: 7
+  firstLevel: 3
   pos: {fileID: 848543353}
   target: 0
   req: 1.5

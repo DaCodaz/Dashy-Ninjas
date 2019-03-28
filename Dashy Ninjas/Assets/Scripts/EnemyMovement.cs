@@ -43,7 +43,7 @@ public class EnemyMovement : MonoBehaviour {
             }
 
             RaycastHit2D hit2 = Physics2D.Raycast(playerDetector.position, Vector2.right, 1f);
-            if(hit2.collider != null && hit2.collider.gameObject.GetComponent<Slice>() == null)
+            if(hit2.collider != null && hit2.collider.gameObject.GetComponent<Slice>() == null && hit2.collider.gameObject.GetComponent<Shuriken>() == null)
             {
                 transform.eulerAngles = new Vector3(0, -180, 0);
                 movingRight = !movingRight;
@@ -62,7 +62,7 @@ public class EnemyMovement : MonoBehaviour {
                 }
             }
             RaycastHit2D hit2 = Physics2D.Raycast(playerDetector.position, Vector2.left, 1f);
-            if (hit2.collider != null && hit2.collider.gameObject.GetComponent<Slice>() == null)
+            if (hit2.collider != null && hit2.collider.gameObject.GetComponent<Slice>() == null && hit2.collider.gameObject.GetComponent<Shuriken>() == null)
             {
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 movingRight = !movingRight;

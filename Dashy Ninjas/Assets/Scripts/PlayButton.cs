@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayButton : MonoBehaviour {
-
-   public void Play()
+    public void Play()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
+    public void PlayTutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
 }

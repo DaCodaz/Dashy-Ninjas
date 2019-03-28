@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/HomeCastle.unity
     guid: 89ebff3afd1774d8a83fd643229ec7da
   - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: b6a9b675e495f488fb34fb77c01acabb
+  - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: 215626f503b7847f6a320b99be0a244a
   - enabled: 1

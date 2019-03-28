@@ -13,10 +13,12 @@ public class Slice : MonoBehaviour {
     public GameObject gOver;
     int uses;
     CharacterController2D controller;
+    Rigidbody2D rb;
 
     private void Start()
     {
         controller = GetComponent<CharacterController2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
     void Update () {
         if (controller.m_Grounded)
@@ -38,6 +40,7 @@ public class Slice : MonoBehaviour {
     {
         animator.Play("Dash");
         aSource.PlayOneShot(aClip);
+        rb.velocity = new Vector2(0,0);
         transform.position = Vector2.Lerp(transform.position, mouseLook, speed);
         uses += 1;
     }
