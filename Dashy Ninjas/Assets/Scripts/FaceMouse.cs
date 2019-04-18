@@ -9,17 +9,20 @@ public class FaceMouse : MonoBehaviour {
 
 	void Update () 
     {
-        Vector2 mouse = new Vector2(Input.mousePosition.x, Screen.height - Input.mousePosition.y);
-        Vector2 playerScreenPoint = Camera.main.WorldToScreenPoint(player.transform.position);
-        if(mouse.x > playerScreenPoint.x && !lookRight)
+        if(Input.touchCount > 0)
         {
-            lookRight = true;
-            Flip();
-        }
-        if (mouse.x < playerScreenPoint.x && lookRight)
-        {
-            lookRight = false;
-            Flip();
+            Vector2 mouse = new Vector2(Input.GetTouch(0).position.x, Screen.height - Input.GetTouch(0).position.y);
+            Vector2 playerScreenPoint = Camera.main.WorldToScreenPoint(player.transform.position);
+            if (mouse.x > playerScreenPoint.x && !lookRight)
+            {
+                lookRight = true;
+                Flip();
+            }
+            if (mouse.x < playerScreenPoint.x && lookRight)
+            {
+                lookRight = false;
+                Flip();
+            }
         }
     }
     void Flip()

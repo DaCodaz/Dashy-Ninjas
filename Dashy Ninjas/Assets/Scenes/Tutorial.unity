@@ -113,81 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &53768331
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 53768332}
-  - component: {fileID: 53768334}
-  - component: {fileID: 53768333}
-  m_Layer: 5
-  m_Name: Text (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &53768332
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 53768331}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2005965328}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 546, y: -84.1}
-  m_SizeDelta: {x: 354.5, y: 118.6}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &53768333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 53768331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.8862746, g: 0.43921572, b: 0.4431373, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 26
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "Enter door after \nall enemies \nare dead"
---- !u!222 &53768334
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 53768331}
-  m_CullTransparentMesh: 0
 --- !u!1 &71193487
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +186,6 @@ GameObject:
   - component: {fileID: 510686946}
   - component: {fileID: 510686945}
   - component: {fileID: 510686948}
-  - component: {fileID: 510686947}
   - component: {fileID: 510686949}
   m_Layer: 0
   m_Name: Tilemap
@@ -821,15 +745,6 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: -5, y: -2, z: 0}
-    second:
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
   - first: {x: 5, y: -2, z: 0}
     second:
       m_TileIndex: 12
@@ -861,15 +776,6 @@ Tilemap:
     second:
       m_TileIndex: 8
       m_TileSpriteIndex: 8
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
-  - first: {x: -5, y: -1, z: 0}
-    second:
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -911,15 +817,6 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: -5, y: 0, z: 0}
-    second:
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
   - first: {x: 5, y: 0, z: 0}
     second:
       m_TileIndex: 13
@@ -956,47 +853,20 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: -6, y: 1, z: 0}
-    second:
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
-  - first: {x: -5, y: 1, z: 0}
-    second:
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
-  - first: {x: -4, y: 1, z: 0}
-    second:
-      m_TileIndex: 5
-      m_TileSpriteIndex: 5
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 36
     m_Data: {fileID: 11400000, guid: b17760ec3383c416099772ccec1adae3, type: 2}
   - m_RefCount: 18
     m_Data: {fileID: 11400000, guid: 66c44a44caaf741129afde152a86db1d, type: 2}
-  - m_RefCount: 3
-    m_Data: {fileID: 11400000, guid: d4839d82cc1904f9189712d38dd2c5b7, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 1b12cffcbabde4662b910efc5594824a, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: bdf61bb097e024537911687ac2707fbf, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 227d610a113294506b22b31eff725c01, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 100ae7f2f927c420589a0bb50a07254e, type: 2}
   - m_RefCount: 1
@@ -1022,14 +892,14 @@ Tilemap:
     m_Data: {fileID: 21300234, guid: 9e9d0fbcf3bf349349cc5cca06775b01, type: 3}
   - m_RefCount: 18
     m_Data: {fileID: 21300186, guid: 9e9d0fbcf3bf349349cc5cca06775b01, type: 3}
-  - m_RefCount: 3
-    m_Data: {fileID: 21300516, guid: 9e9d0fbcf3bf349349cc5cca06775b01, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300372, guid: 9e9d0fbcf3bf349349cc5cca06775b01, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300374, guid: 9e9d0fbcf3bf349349cc5cca06775b01, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300376, guid: 9e9d0fbcf3bf349349cc5cca06775b01, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 21300366, guid: 9e9d0fbcf3bf349349cc5cca06775b01, type: 3}
   - m_RefCount: 1
@@ -1051,7 +921,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 21300098, guid: 9e9d0fbcf3bf349349cc5cca06775b01, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 72
+  - m_RefCount: 66
     m_Data:
       e00: 1
       e01: 0
@@ -1070,7 +940,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 72
+  - m_RefCount: 66
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1095,31 +965,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!61 &510686947
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 510686943}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -4.4798956, y: 1.5029986}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.0013905, y: 0.9940028}
-  m_EdgeRadius: 0
 --- !u!61 &510686948
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1195,8 +1040,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -125, y: -91}
-  m_SizeDelta: {x: 307.6, y: 77}
+  m_AnchoredPosition: {x: 473, y: 170}
+  m_SizeDelta: {x: 213.3, y: 141.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &624651950
 MonoBehaviour:
@@ -1230,7 +1075,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Long tap for shurikens
+  m_Text: Dash into door after all enemies are dead
 --- !u!222 &624651951
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1476,8 +1321,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -319, y: 166}
-  m_SizeDelta: {x: 238, y: 54.3}
+  m_AnchoredPosition: {x: -205, y: -43}
+  m_SizeDelta: {x: 710.7, y: 92.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1399841713
 MonoBehaviour:
@@ -1511,7 +1356,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Touch to dash somewhere
+  m_Text: 'Touch to dash and throw shuriken
+
+    The longer you hold, the more shurikens you throw'
 --- !u!222 &1399841714
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1841,7 +1688,6 @@ RectTransform:
   m_Children:
   - {fileID: 1399841712}
   - {fileID: 624651949}
-  - {fileID: 53768332}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

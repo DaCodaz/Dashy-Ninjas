@@ -1102,6 +1102,48 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &1379805791
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4554298628369454, guid: e37f17b19f21b4c879c49c0bbbdb97f9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 4554298628369454, guid: e37f17b19f21b4c879c49c0bbbdb97f9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.2137251
+      objectReference: {fileID: 0}
+    - target: {fileID: 4554298628369454, guid: e37f17b19f21b4c879c49c0bbbdb97f9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4554298628369454, guid: e37f17b19f21b4c879c49c0bbbdb97f9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4554298628369454, guid: e37f17b19f21b4c879c49c0bbbdb97f9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4554298628369454, guid: e37f17b19f21b4c879c49c0bbbdb97f9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4554298628369454, guid: e37f17b19f21b4c879c49c0bbbdb97f9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4554298628369454, guid: e37f17b19f21b4c879c49c0bbbdb97f9, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e37f17b19f21b4c879c49c0bbbdb97f9, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1380239235
 Prefab:
   m_ObjectHideFlags: 0
@@ -1216,7 +1258,7 @@ Transform:
   - {fileID: 1368144916}
   - {fileID: 1006378064}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1485064509
 BoxCollider2D:
@@ -2705,7 +2747,7 @@ Prefab:
   m_IsPrefabAsset: 0
 --- !u!1 &2024901612 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1987071989500714, guid: 2fe5d6e40b0d4437b93637b853787923,
+  m_CorrespondingSourceObject: {fileID: 1962660505857484, guid: 2fe5d6e40b0d4437b93637b853787923,
     type: 2}
   m_PrefabInternal: {fileID: 2024901611}
 --- !u!114 &2024901613 stripped
